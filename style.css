@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  max-width: 1400px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Header Start here  */
+
+.top-bar {
+  background-color: olive;
+  color: white;
+  max-width: 600px;
+  padding: 20px 100px;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 20px;
+  padding-top: 70px;
+  font-weight: 200;
+  /* animation: hideShow 5s infinite alternate; */
+  position: absolute;
+  font-family: 'Dancing Script', cursive;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 1.8;
+}
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-top: 100px;
+  background-color: white;
+}
+header .logo {
+  width: 60px;
+  /* animation: breath 1s infinite alternate; */
+}
+.logo img {
+  width: 100%;
+}
+
+@keyframes hideShow {
+  0% {
+    background-color: olive;
+  }
+  50% {
+    background-color: rgb(82, 82, 9);
+  }
+  100% {
+    background-color: rgb(47, 47, 10);
+  }
+}
+@keyframes jump {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-3px);
+  }
+}
+
+nav.navbar ul {
+  display: flex;
+  list-style: none;
+}
+nav.navbar ul li {
+  padding: 0px 15px;
+  font-size: 18px;
+}
+nav.navbar ul li a {
+  color: #111;
+  text-decoration: none;
+}
+header .cart {
+  margin-right: 20px;
+  font-size: 22px;
+  padding: 7px;
+  color: #092a46;
+  cursor: pointer;
+  animation: jump 1s infinite alternate;
+}
+
+/* Header end here  */
+
+/* Search bar start here  */
+
+.searchbox {
+  display: flex;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 1px solid blue; */
+  padding: 20px 0;
+  margin-top: 50px;
+}
+.searchbox .search {
+  width: 90%;
+  margin: 0 10px;
+}
+.search input::placeholder {
+  font-weight: 100;
+  font-size: 16px;
+}
+.search input,
+.search-btn button {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid gray;
+  color: rgb(44, 43, 43);
+  border-radius: 40px;
+}
+.search-btn button {
+  width: 10%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  font-size: 25px;
+  background-color: white;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+/* Search bar start here  */
+
+/* Food Box start  */
+.foodCard-section {
+  padding: 50px 0;
+}
+.foodBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.foodCard {
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.foodCard:hover {
+  transform: translateY(-10px);
+}
+.food-img img {
+  width: 300px;
+  height: 158px;
+  object-fit: cover;
+}
+.food-title,
+.food-cousins,
+.how-far {
+  display: block;
+}
+.foodCard .food-title {
+  font-weight: 600;
+  margin-top: 5px;
+}
+.food-rating {
+  float: right;
+}
+.how-far {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 14px;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+}
+.food-cousins {
+  font-size: 10px;
+  font-weight: 500;
+  color: olive;
+}
+
+/* Food Box end  */
+
+
+@media screen and (max-width:767px) {
+  .navbar{
+    display: none;
+  }
+  .top-bar{
+    padding:67px 15px 12px;
+  }
+  .foodCard-section{
+    padding: 0;
+  }
+  .searchbox{
+    margin-top: 15px;
+  }
+  header{
+    padding: 10px;
+  }
+  header .cart{
+    margin: 0;
+  }
+}
